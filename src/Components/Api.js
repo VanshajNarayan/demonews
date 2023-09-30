@@ -9,7 +9,7 @@ const Api = () => {
 
   const Apicalling = async () => {
     const data = await axios.get(`https://newsapi.org/v2/top-headlines?country=in&apiKey=50ee585bf1364c1db2d0b89b0b504a7b`);
-    if (data.data.status === "ok" ) {
+    if (data.request.status === 200 && data.data.status === "ok" && data.request.readyState === 4 ) {
       setApiData(data.data.articles);
     }
   }
