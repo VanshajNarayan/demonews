@@ -10,7 +10,7 @@ const Api = () => {
     const responce = await fetch(`https://newsapi.org/v2/top-headlines?country=in&apiKey=50ee585bf1364c1db2d0b89b0b504a7b`);
     const {articles} = await responce.json();
     setApiData(articles);
-    console.log(articles);
+    // console.log(articles);
   }
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const Api = () => {
       <h2>Daily News</h2>
       <div className="allNews">
         {
-          apiData.map((elements, index) => <News key={index} elements = {elements} /> )
+          apiData.map((elements, index) => <News key={index} elementss = {elements} /> )
         }
       </div>
     </>

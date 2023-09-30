@@ -1,15 +1,15 @@
-const News = ({elements}) => {
+const News = ({elementss}) => {
   return (
     <>
       <div className="cards">
-        <a href={elements.url} target="_blank" rel="noreferrer" >
+        <a href={elementss.url} target="_blank" rel="noreferrer" >
           <img
-            src={elements.urlToImage}
-            alt={elements.description}
+            src={elementss.urlToImage}
+            alt={elementss.description}
             width="100%"
           />
         </a>
-        <p> {elements.source.name} </p>
+        <p> {elementss.source.name} </p>
       </div>
     </>
   )
