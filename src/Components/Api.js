@@ -8,8 +8,13 @@ const Api = () => {
 
   const Apicalling = async () => {
     const responce = await fetch(`https://newsapi.org/v2/top-headlines?country=in&apiKey=50ee585bf1364c1db2d0b89b0b504a7b`);
-    const {articles} = await responce.json();
-    setApiData(articles);
+    // const {articles} = await responce.json();
+    const data = await responce.json();
+    if (data.status === "ok") {
+      console.log(data.articles);
+      setApiData(data.articles);
+    }
+      
   }
 
   useEffect(() => {
