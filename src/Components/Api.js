@@ -1,20 +1,17 @@
 import { useEffect, useState } from "react";
 import News from "./News";
 import "./Api.css"
+import axios from "axios";
 
 const Api = () => {
 
   const [apiData, setApiData] = useState([]);
 
   const Apicalling = async () => {
-    const responce = await fetch(`https://newsapi.org/v2/top-headlines?country=in&apiKey=50ee585bf1364c1db2d0b89b0b504a7b`);
-    // const {articles} = await responce.json();
-    const data = await responce.json();
-    if (data.status === "ok") {
-      console.log(data.articles);
-      setApiData(data.articles);
+    const data = await axios.get(`https://newsapi.org/v2/top-headlines?country=in&apiKey=50ee585bf1364c1db2d0b89b0b504a7b`);
+    if (data.data.status === "ok" ) {
+      setApiData(data.data.articles);
     }
-      
   }
 
   useEffect(() => {
