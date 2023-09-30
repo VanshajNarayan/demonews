@@ -1,0 +1,20 @@
+.allNews{
+  border: 2px solid red;
+  max-width: 70rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.allNews .cards{
+  border: 2px solid blue;
+  max-width: 15rem;
+  margin: 1rem;
+}
+
+.allNews .cards p{
+  margin-top: 0;
+  margin-bottom: 10px;
+}
